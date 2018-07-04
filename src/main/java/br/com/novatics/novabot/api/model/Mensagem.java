@@ -53,6 +53,8 @@ public class Mensagem extends Modelo {
 
 	@JsonProperty(value = "trigger_id")
 	private String triggerId;
+	
+	private String userBy;
 
 	public Long getId() {
 		return id;
@@ -156,6 +158,14 @@ public class Mensagem extends Modelo {
 
 	public void setTriggerId(String triggerId) {
 		this.triggerId = triggerId;
+	}
+
+	public String getUserBy() {
+		return userBy;
+	}
+
+	public void setUserBy(String userBy) {
+		this.userBy = userBy;
 	}
 	
 }

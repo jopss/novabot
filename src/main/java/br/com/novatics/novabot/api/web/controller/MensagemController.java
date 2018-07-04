@@ -20,10 +20,6 @@ public class MensagemController extends NovabotController {
 	@Autowired
 	private MensagemService mensagemService;
 
-//	@RequestMapping(
-//        value = "/mensagem/salvar", method = RequestMethod.POST,
-//        consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE
-//    )
 	@PostMapping(value = "/mensagem/salvar", produces = MediaType.APPLICATION_JSON_VALUE, consumes=MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 	public Resposta cadastrar(@RequestBody Mensagem mensagem) {
 		mensagemService.salvar(mensagem);
